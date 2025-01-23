@@ -19,7 +19,6 @@ chmod +x ansible_setup_master.sh
 
 Copy the Public Key from Master VM
 On the Master VM, retrieve the public SSH key to allow SSH access to the Target VM
-```bash
 cat ~/.ssh/id_rsa.pub
 Copy the output of this command, as you will need to paste it into the Target VM.
 
@@ -33,7 +32,7 @@ This script will configure the Target VM to allow SSH connections from the Maste
 
 1. Create an Ansible Inventory File
 Create an inventory file (inventory.ini) on the Master VM to define the Target VMs. You can store this file in /etc/ansible/hosts or in a custom location (e.g., inventory.ini).
-```bash
+```markdown
 vi inventory.ini
 [targets]
 10.150.0.9

@@ -7,7 +7,7 @@
    
 2. **Target VM (Medium Specs)**
    - This will be the machine where Nginx will be installed.
----
+
 ## Step 2: Setup Ansible on Master VM
 
 ### 1. **Make Setup Script Executable**
@@ -27,7 +27,7 @@ On the Target VM, execute the setup_ansible_target.sh script, and paste the copi
 ```markdown
 ./setup_ansible_target.sh
 This script will configure the Target VM to allow SSH connections from the Master VM and install the necessary packages for Ansible management.
----
+
 ##  Step 4: Validate the Connection Between Master and Target VM
 
 1. Create an Ansible Inventory File
@@ -40,9 +40,9 @@ vi inventory.ini
 This file tells Ansible the IP addresses of the Target VMs (10.150.0.9 and 10.150.0.8).
 ### 3. **Test Connectivity Using Ansible**
 Run the following command to test the connectivity from the Master VM to the Target VMs:
-```bash
+
 ansible all -i inventory.ini -m ping
----
+
 ## Step 5: Create a Playbook to Install Nginx on Both Servers
 
 Run the Playbook

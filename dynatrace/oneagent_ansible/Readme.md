@@ -18,7 +18,6 @@ This guide provides step-by-step instructions for setting up Dynatrace OneAgent 
    - Ansible control machine: Manages the playbook execution.
    - Target hosts: Linux servers where Dynatrace OneAgent will be installed.
 
-
 ## Create API Token on Dynatrace with PaaS Integration - Installer Download Scope
 
 1. **Go to Dynatrace Console**  
@@ -33,7 +32,8 @@ This guide provides step-by-step instructions for setting up Dynatrace OneAgent 
    Once generated, copy the **API Token** for use in your automation or setup.
 
 
-## Installation script URL: Obtain the OneAgent installation script URL from your Dynatrace environment. For example:
+## Installation Script URL
+Obtain the OneAgent installation script URL from your Dynatrace environment. For example:
 
 ```bash
 https://<environment-id>.live.dynatrace.com/api/v1/deployment/installer/agent/unix/default/latest?Api-Token=<token>&arch=x86

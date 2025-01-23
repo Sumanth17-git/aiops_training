@@ -1,0 +1,29 @@
+---
+- name: Install Nginx on target servers
+  hosts: targets  # This matches the [targets] group in your inventory file
+  become: yes  # Use sudo to install packages
+  tasks:
+    - name: Update apt cache
+      apt:
+        update_cache: yes
+        cache_valid_time: 3600  # Cache is valid for 1 hour
+    
+    - name: Install Nginx
+      apt:
+        name: nginx
+        state: present  # Ensure Nginx is installed
+    
+    - name: Start and enable Nginx service
+      systemd:
+        name: nginx
+        state: started
+        enabled: yes  # Ensure Nginx starts on boot
+
+    - name: Check if Nginx is running
+      command: systemctl status nginx
+      register: nginx_status
+      changed_when: false
+
+    - name: Display Nginx status
+      debug:
+        msg: "Nginx is running: {{ nginx_status.stdout }}"

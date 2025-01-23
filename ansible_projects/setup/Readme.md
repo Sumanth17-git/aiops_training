@@ -24,7 +24,7 @@ Copy the output of this command, as you will need to paste it into the Target VM
 
 ### 2. **Run Setup Script on Target VM**
 On the Target VM, execute the setup_ansible_target.sh script, and paste the copied public key when prompted:
-```markdown
+
 ./setup_ansible_target.sh
 This script will configure the Target VM to allow SSH connections from the Master VM and install the necessary packages for Ansible management.
 
@@ -32,7 +32,7 @@ This script will configure the Target VM to allow SSH connections from the Maste
 
 1. Create an Ansible Inventory File
 Create an inventory file (inventory.ini) on the Master VM to define the Target VMs. You can store this file in /etc/ansible/hosts or in a custom location (e.g., inventory.ini).
-```markdown
+
 vi inventory.ini
 [targets]
 10.150.0.9
@@ -47,6 +47,6 @@ ansible all -i inventory.ini -m ping
 
 Run the Playbook
 Execute the playbook to install Nginx on the Target VMs:
-```bash
+
 ansible-playbook -i inventory.ini install_nginx.yml
----
+

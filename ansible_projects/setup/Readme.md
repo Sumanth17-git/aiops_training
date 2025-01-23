@@ -13,8 +13,6 @@
 ### 1. **Make Setup Script Executable**
 
 On the Ansible Master VM, navigate to the directory where your setup script is located and make it executable:
-
-```bash
 chmod +x ansible_setup_master.sh
 
 ##  Step 3: Setup Ansible on Target VM

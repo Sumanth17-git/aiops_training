@@ -1,0 +1,1 @@
+dynatrace_installer_url: "https://<environment-id>.live.dynatrace.com/api/v1/deployment/installer/agent/unix/default/latest?Api-Token=<token>&arch=x86"

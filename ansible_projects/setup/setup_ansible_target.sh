@@ -1,9 +1,7 @@
 #!/bin/bash
-# Update and install prerequisites
-sudo apt update -y
 
 echo "Starting system update..."
-sudo apt update && echo "System update completed."
+sudo apt update -y && echo "System update completed."
 
 # Create Ansible user without password
 echo "Creating 'ansible' user..."

@@ -54,7 +54,11 @@ Execute the following command to deploy the Dynatrace OneAgent on the target hos
 
 ```bash
 ansible-playbook dynatrace_oneagent.yml -i inventory.ini --extra-vars "@vars.yml"
-
+```
+Change the monitoring mode
+```bash
+ansible-playbook -i inventory.ini change_monitoring_mode.yml
+```
 
 ### Explanation of Tasks
 

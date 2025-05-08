@@ -1,4 +1,5 @@
-dynatrace_installer_url: "https://ysd34428.live.dynatrace.com/api/v1/deployment/installer/agent/unix/default/latest?Api-Token=<Token>&arch=x86"
-hosts: "production"
-monitoring_mode: "INFRA_ONLY=1"
-# Monitoring modes -Discovery as "INSTALL_MODE=unattended INSTALLER_MODE=discovery" a, Infrastructure mode as "INFRA_ONLY=1" , Fullstack means keep it empty
+dynatrace_installer_url: "https://ysd34428.live.dynatrace.com/api/v1/deployment/installer/agent/unix/default/latest?Api-Token=<token>&arch=x86"
+hosts: "development"
+#monitoring_mode: "infra-only"
+#monitoring_mode: "discovery"
+monitoring_mode: "fullstack"

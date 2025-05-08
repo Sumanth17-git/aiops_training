@@ -1,0 +1,18 @@
+---
+- name: Change Dynatrace OneAgent Monitoring Mode
+  hosts: production
+  become: yes
+
+  vars:
+    monitoring_mode: "fullstack"  # Options: fullstack, infra_only, discovery
+
+  tasks:
+    - name: Set Dynatrace monitoring mode
+      command: >
+        /opt/dynatrace/oneagent/agent/tools/oneagentctl
+        --set-monitoring-mode={{ monitoring_mode }}
+        --restart-service
+    - name: Restart Dynatrace OneAgent service
+      service:
+        name: oneagent
+        state: restarted

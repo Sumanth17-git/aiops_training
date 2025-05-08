@@ -1,5 +1,6 @@
 Refer
-```bash https://github.com/genzgurukul/dynatrace_practice/blob/main/Basic_Setups/04.Managing%20Dynatrace%20OneAgent%20Deployment%20using%20Ansible.md
+```bash
+https://github.com/genzgurukul/dynatrace_practice/blob/main/Basic_Setups/04.Managing%20Dynatrace%20OneAgent%20Deployment%20using%20Ansible.md
 ```
 # Setting Up Dynatrace OneAgent Using an Ansible Playbook
 

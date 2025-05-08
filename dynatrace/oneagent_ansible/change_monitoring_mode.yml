@@ -4,7 +4,7 @@
   become: yes
 
   vars:
-    monitoring_mode: "fullstack"  # Options: fullstack, infra_only, discovery
+    monitoring_mode: "fullstack"  # Options: fullstack, infra-only, discovery
 
   tasks:
     - name: Set Dynatrace monitoring mode

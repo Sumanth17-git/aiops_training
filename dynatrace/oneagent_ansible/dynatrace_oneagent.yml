@@ -1,6 +1,6 @@
 ---
 - name: Deploy Dynatrace OneAgent
-  hosts: all
+  hosts: "{{ hosts }}"
   become: yes
   tasks:
     - name: Ensure the required tools are installed
@@ -18,7 +18,7 @@
         mode: '0755'
 
     - name: Run the Dynatrace OneAgent installer
-      command: "/bin/bash /tmp/Dynatrace-OneAgent.sh APP_LOG_CONTENT_ACCESS=1"
+      command: "/bin/bash /tmp/Dynatrace-OneAgent.sh {{ monitoring_mode }} APP_LOG_CONTENT_ACCESS=1"
 
     - name: Verify OneAgent service is running
       service:
